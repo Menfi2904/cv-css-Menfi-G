@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body{
+    background:rgb(13, 59, 97);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1200px;
+    background: white;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.container .box_izquierda{
+    position: relative;
+    background: rgb(15, 108, 136);
+    padding: 40px;
+}
+
+.box_izquierda h3{
+    color:white;
+    text-align: center;
+}
+
+.box_izquierda li{
+    color:white;
+    font-size: 14px;
+}
+
+.box_izquierda a{
+    color:white;
+}
+
+.box_izquierda p{
+    color:white;
+}
+
+
+.container .box_derecha{
+    position: relative;
+    background: rgb(227, 227, 236);
+    padding: 40px;
+    
+    
+}
+
+.box_derecha h3{
+    color: rgb(15, 108, 136);
+    
+}
+
+.box_derecha p{
+    font-size: 15px;
+}
+
+.box_derecha h5{
+    color: rgb(15, 108, 136);
+    font-size: 15px;
+    text-align: center;
+}
+
+.perfil h1{
+    font-size: 40px;
+    font-weight: 500px;
+    position: relative;
+    text-align:center;
+    color: rgb(6, 77, 99);
+    margin: 0%;
+}
+
+.perfil h2{
+    font-size: 45px;
+    font-weight: 500px;
+    position: relative;
+    text-align:center;
+    color: rgb(15, 108, 136);
+    margin: 0%;
+}
+
+.borde_celeste{
+    display: grid;
+    grid-template-rows: 1px;
+    background: rgb(15, 108, 136);
+    margin-inline-end: 5%;
+    padding: 0.5px;
+    margin-bottom: 3%;
+}
+
+.box_derecha span{
+    color: rgb(15, 108, 136);
+    font-size: 18px;
+    margin-left: 30px;
+    
+}
+
+img{
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: -20px;
+    
+}
+
+.skills__item{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 260px;
+    margin-block: -2%;
+}
+
+.skills__bar,
+.skills__bar::after{
+    position: relative;
+    width: 175px;
+    height: 8px;
+    background-color: gray;
+    border-radius: var(--border-radius);
+    align-items:right;
+    overflow: hidden;
+    
+    
+}
+
+.skills__bar::after{
+    content: "";
+    position: absolute;
+    left: -175px;
+    background-color:rgb(2, 22, 58);
+    animation: skills-bar 2s ease-in-out forwards;
+    
+}
+
+.skills__bar--30::after{
+    --skills-bar-length:30%;
+}
+
+@keyframes skills-bar {
+  to{
+    transform: translateX(var(--skills-bar-length));
+  }
+    
+}
